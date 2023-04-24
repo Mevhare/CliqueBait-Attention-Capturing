@@ -1,6 +1,8 @@
 ---
 # CliqueBait Case Study #8WeekSQLChallenge
+
 For more details about the #8WeekSQLChallenge [click here](https://8weeksqlchallenge.com)
+
 ---
 ## Table of Contents
 - [Introduction](#introduction)
