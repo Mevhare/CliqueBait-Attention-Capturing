@@ -93,12 +93,35 @@ ORDER BY no_of_views DESC
 
 
 -- What are the top 3 products by purchases?
-SELECT page_name, COUNT(a.*) FILTER (WHERE event_name = 'Purchase') AS no_of_purchases
+WITH purchase_visit_id AS (
+SELECT DISTINCT(visit_id)
+FROM clique_bait.events
+WHERE event_type = 3
+),
+purchase_info AS (
+SELECT a.visit_id, b.page_name, SUM(CASE WHEN a.event_type = 2 THEN 1 ELSE 0 END) AS add_to_cart 
 FROM clique_bait.events AS a
-JOIN clique_bait.event_identifier AS b
-USING (event_type)
-JOIN clique_bait.page_hierarchy AS c
+JOIN clique_bait.page_hierarchy AS b
 USING (page_id)
-WHERE product_category IS NOT NULL 
+WHERE b.product_id IS NOT NULL
+GROUP BY a.visit_id, b.page_name
+),
+product_purchase AS (
+SELECT  visit_id, 
+		page_name, 
+		add_to_cart,
+		CASE WHEN pv.visit_id IS NOT NULL THEN 1 ELSE 0 END AS purchase
+FROM purchase_info AS pi
+LEFT JOIN purchase_visit_id AS pv
+USING (visit_id)
+)
+SELECT  page_name AS product, 
+		SUM(CASE WHEN add_to_cart = 1 AND purchase = 1 THEN 1 ELSE 0 END) AS purchases
+FROM product_purchase
 GROUP BY page_name
-ORDER BY no_of_purchases DESC
+ORDER BY purchases DESC
+LIMIT 3
+
+
+
+
