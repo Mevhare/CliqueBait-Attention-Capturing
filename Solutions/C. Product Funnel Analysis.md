@@ -147,7 +147,7 @@ LIMIT 1;
 ```
  Russian Caviar was the most likely to be abandoned.
 
--- Which product had the highest view to purchase percentage?
+- Which product had the highest view to purchase percentage?
 
 ```sql
 SELECT product, ROUND(100*(purchases/page_view::numeric),2) AS view_to_purchase_percentage
