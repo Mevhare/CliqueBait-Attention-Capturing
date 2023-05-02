@@ -58,7 +58,7 @@ FROM product_performance
 GROUP BY page_name
 ORDER BY product;
 ```
-![]()
+![product_funnel_analysis_1](Images/product_funnel_analysis_1.png)
 
 
 
@@ -114,6 +114,7 @@ FROM product_performance
 GROUP BY product_category
 ORDER BY product_category;
 ```
+![product_funnel_analysis_2](Images/product_funnel_analysis_2.png)
 
 Use your 2 new output tables - answer the following questions:
 
@@ -125,6 +126,7 @@ FROM clique_bait.product_performance_report
 ORDER BY page_view DESC
 LIMIT 1;
 ```
+![product_funnel_analysis_3_1](Images/product_funnel_analysis_3_1.png)
 Oyster has the most views.
 
 ```sql
@@ -133,6 +135,7 @@ FROM clique_bait.product_performance_report
 ORDER BY cart_adds DESC
 LIMIT 1;
 ```
+![product_funnel_analysis_3_2](Images/product_funnel_analysis_3_2.png)
 Lobster has the most cart adds and purchases.
 	
 
@@ -145,6 +148,7 @@ FROM clique_bait.product_performance_report
 ORDER BY abandonment_prob DESC
 LIMIT 1;
 ```
+![product_funnel_analysis_4](Images/product_funnel_analysis_4.png)
  Russian Caviar was the most likely to be abandoned.
 
 - Which product had the highest view to purchase percentage?
@@ -155,7 +159,7 @@ FROM clique_bait.product_performance_report
 ORDER BY view_to_purchase_percentage DESC
 LIMIT 1;
 ```
-
+![product_funnel_analysis_5](Images/product_funnel_analysis_5.png)
 Lobster has the highest view to purchase percentage
 
 - What is the average conversion rate from view to cart add?
@@ -164,9 +168,10 @@ Lobster has the highest view to purchase percentage
 SELECT ROUND(100 * AVG(cart_adds/page_view::numeric),2) AS avg_view_to_cart_add 
 FROM clique_bait.product_performance_report;
 ```
-
+![product_funnel_analysis_6](Images/product_funnel_analysis_6.png)
 - What is the average conversion rate from cart add to purchase?
 ```sql
 SELECT ROUND(100 * AVG(purchases/cart_adds::numeric),2) AS avg_view_to_cart_add 
 FROM clique_bait.product_performance_report;
 ```
+![product_funnel_analysis_7](Images/product_funnel_analysis_7.png)
