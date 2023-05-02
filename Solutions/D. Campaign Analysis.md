@@ -74,7 +74,7 @@ GROUP BY  CASE WHEN impression =1 AND click = 1  THEN 'Impression and Click'
 			 WHEN impression = 0 AND click = 0 THEN 'No impression' 
 			 WHEN impression = 1 AND click = 0 THEN 'Impression and no Click' END;
 ```
-[campaign_analysis_2](Images/campaign_analysis_2.png)
+![campaign_analysis_2](Images/campaign_analysis_2.png)
 
 -- What metrics can you use to quantify the success or failure of each campaign compared to eachother?
 
@@ -91,4 +91,4 @@ WHERE visit_start_time::DATE <= '2020-03-31' AND campaign_name IS NOT NULL
 GROUP BY campaign_name;
 ```
 
-[campaign_analysis_3](Images/campaign_analysis_3.png)
+![campaign_analysis_3](Images/campaign_analysis_3.png)
