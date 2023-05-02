@@ -8,7 +8,7 @@
 SELECT COUNT(DISTINCT(user_id)) AS no_of_users
 FROM clique_bait.users;
 ```
-
+![digital_analysis_1](Images/digital_analysis_1.png)
 - How many cookies does each user have on average?
 ```sql
 WITH cookies AS (
@@ -19,7 +19,7 @@ GROUP BY user_id
 SELECT ROUND(AVG(cookie_count),0) AS avg_no_cookies_per_user
 FROM cookies;
 ```
-
+![digital_analysis_2](Images/digital_analysis_2.png)
 - What is the unique number of visits by all users per month?
 ```sql
 SELECT EXTRACT(month from event_time) AS month, COUNT(DISTINCT(visit_id)) AS no_of_visits
@@ -27,7 +27,7 @@ FROM clique_bait.events
 GROUP BY EXTRACT(month from event_time)
 ORDER BY month;
 ```
-
+![digital_analysis_3](Images/digital_analysis_3.png)
 - What is the number of events for each event type?
 ```sql
 SELECT a.event_type, b.event_name, COUNT(a.*) AS no_of_events
@@ -37,7 +37,7 @@ USING (event_type)
 GROUP BY a.event_type, b.event_name
 ORDER BY event_type;
 ```
-
+![digital_analysis_4](Images/digital_analysis_4.png)
 - What is the percentage of visits which have a purchase event?
 ```sql
 WITH no_of_events_type AS (
@@ -51,7 +51,7 @@ ORDER BY event_type
 SELECT ROUND((SUM(no_of_events) FILTER( WHERE event_name = 'Purchase')/SUM(no_of_events)) *100,2) AS purchase_event_percent
 FROM no_of_events_type;
 ```
-
+![digital_analysis_5](Images/digital_analysis_5.png)
 
 - What is the percentage of visits which view the checkout page but do not have a purchase event?
 ```sql
@@ -68,7 +68,7 @@ GROUP BY visit_id
 SELECT ROUND(100-((SUM(purchase)::numeric/SUM(checkout)) *100),2) AS percentage_checkout_view_with_no_purchase
 FROM a;
 ```
-
+![digital_analysis_6](Images/digital_analysis_6.png)
 - What are the top 3 pages by number of views?
 ```sql
 SELECT b.page_name, COUNT(a.*) AS no_of_views
@@ -82,7 +82,7 @@ GROUP BY b.page_name
 ORDER BY no_of_views DESC 
 LIMIT 3;
 ```
-
+![digital_analysis_7](Images/digital_analysis_7.png)
 
 - What is the number of views and cart adds for each product category?
 
@@ -98,7 +98,7 @@ WHERE product_category IS NOT NULL
 GROUP BY product_category
 ORDER BY no_of_views DESC;
 ```
-
+![digital_analysis_8](Images/digital_analysis_8.png)
 - What are the top 3 products by purchases?
 
 ```sql
@@ -131,6 +131,6 @@ GROUP BY page_name
 ORDER BY purchases DESC
 LIMIT 3;
 ```
-
+![digital_analysis_9](Images/digital_analysis_9.png)
 
 
