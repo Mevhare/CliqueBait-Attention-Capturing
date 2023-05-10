@@ -1,6 +1,8 @@
 ---
 # CliqueBait Case Study #8WeekSQLChallenge
 
+<img src="https://github.com/Mevhare/CliqueBait-Case-Study--8WeekSQLChallenge/blob/main/Images/case_study.png" width="540" height="540">
+
 For more details about the #8WeekSQLChallenge [click here](https://8weeksqlchallenge.com)
 
 ---
@@ -24,6 +26,11 @@ The database schema is [available](https://github.com/Mevhare/CliqueBait-Case-St
 - [Page Hierarchy](https://github.com/Mevhare/CliqueBait-Case-Study--8WeekSQLChallenge/blob/main/Data/page_hierarchy.csv)
 
 ## Case Study Questions
-- [Digital Analysis]
-- [Product Funnel Analysis]
-- [Campaign Analysis]
+- Entity Relationship Diagram 
+<img src="https://github.com/Mevhare/CliqueBait-Case-Study--8WeekSQLChallenge/blob/main/Solutions/A._Clique_Bait_ER_diagram.png" width="700" height="450">
+
+- [Digital Analysis](https://github.com/Mevhare/CliqueBait-Case-Study--8WeekSQLChallenge/blob/main/Solutions/B.%20Digital%20Analysis.md)
+
+- [Product Funnel Analysis](https://github.com/Mevhare/CliqueBait-Case-Study--8WeekSQLChallenge/blob/main/Solutions/C.%20Product%20Funnel%20Analysis.md)
+
+- [Campaign Analysis](https://github.com/Mevhare/CliqueBait-Case-Study--8WeekSQLChallenge/blob/main/Solutions/D.%20Campaign%20Analysis.md)
