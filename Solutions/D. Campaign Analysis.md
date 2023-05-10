@@ -76,7 +76,7 @@ GROUP BY  CASE WHEN impression =1 AND click = 1  THEN 'Impression and Click'
 ```
 ![campaign_analysis_2](Images/campaign_analysis_2.png)
 
--- What metrics can you use to quantify the success or failure of each campaign compared to eachother?
+- What metrics can you use to quantify the success or failure of each campaign compared to eachother?
 
 
 ```sql
@@ -92,3 +92,6 @@ GROUP BY campaign_name;
 ```
 
 ![campaign_analysis_3](Images/campaign_analysis_3.png)
+
+Further Analysis
+- [Market Basket Analysis](https://github.com/Mevhare/CliqueBait-Case-Study--8WeekSQLChallenge/blob/main/Solutions/Market%20Basket%20Analysis/Market%20Basket%20Analysis.ipynb)
