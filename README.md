@@ -9,8 +9,8 @@ For more details about the #8WeekSQLChallenge [click here](https://8weeksqlchall
 ## Table of Contents
 - [Introduction](#introduction)
 - [Data](#data)
-- [Case Study Questions](#case-study-questions)
-- [Dashboard](#dashboard)
+- [Case Study Questions](#case-study-questions-and-solution)
+- [Product Basket Analysis](#further-analysis)
 ---
 ## Introduction
 Clique Bait is not like your regular online seafood store - the founder and CEO Danny, was also a part of a digital data analytics team and wanted to expand his knowledge into the seafood industry!
@@ -36,4 +36,4 @@ For this case study there is a total of 5 tables which are;
 - [Campaign Analysis](https://github.com/Mevhare/CliqueBait-Case-Study--8WeekSQLChallenge/blob/main/Solutions/D.%20Campaign%20Analysis.md)
 
 ## Further Analysis
-- [Product Basket Analysis]()
+- [Product Basket Analysis](https://github.com/Mevhare/CliqueBait-Case-Study--8WeekSQLChallenge/blob/main/Solutions/Market%20Basket%20Analysis/Market%20Basket%20Analysis.ipynb)
