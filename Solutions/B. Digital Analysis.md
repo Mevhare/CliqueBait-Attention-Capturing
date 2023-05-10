@@ -133,4 +133,5 @@ LIMIT 3;
 ```
 ![digital_analysis_9](Images/digital_analysis_9.png)
 
-
+Next Solution
+- [C. Product Funnel Analysis](https://github.com/Mevhare/CliqueBait-Case-Study--8WeekSQLChallenge/blob/main/Solutions/C.%20Product%20Funnel%20Analysis.md)
