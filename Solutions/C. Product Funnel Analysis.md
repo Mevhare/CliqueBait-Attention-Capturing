@@ -175,3 +175,6 @@ SELECT ROUND(100 * AVG(purchases/cart_adds::numeric),2) AS avg_view_to_cart_add
 FROM clique_bait.product_performance_report;
 ```
 ![product_funnel_analysis_7](Images/product_funnel_analysis_7.png)
+
+Next Solution
+- [D. Campaign Analysis](https://github.com/Mevhare/CliqueBait-Case-Study--8WeekSQLChallenge/blob/main/Solutions/D.%20Campaign%20Analysis.md)
